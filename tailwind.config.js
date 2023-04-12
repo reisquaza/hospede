@@ -15,7 +15,7 @@ export const theme = {
   },
   extend: {
     colors: {
-      primary: "#006E75",
+      brand0: "#006E75",
       brand1: "#006E75",
       brand2: "#348C93",
       brand3: "#57ABB2",

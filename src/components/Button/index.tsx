@@ -12,7 +12,7 @@ function ButtonComponent({ children, className, onClick }: iButtonProps) {
       onClick={onClick}
       className={`font-bold py-3 px-7 rounded-md border-2 border-brand1 bg-brand1 text-grey10 hover:bg-brand4 hover:border-brand4 ${className}`}
     >
-      {children},
+      {children}
     </button>
   );
 }
