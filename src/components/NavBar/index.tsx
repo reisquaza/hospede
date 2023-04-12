@@ -10,7 +10,7 @@ function NavBarComponent() {
           <ButtonComponent className="bg-grey0 mr-1 text-brand1 hover:border-brand0">
             Cadastro
           </ButtonComponent>
-          <ButtonComponent className="ml-1">Login</ButtonComponent>
+          <ButtonComponent className="ml-1">Login.</ButtonComponent>
         </div>
       </div>
     </div>
