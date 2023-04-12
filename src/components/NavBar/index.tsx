@@ -7,7 +7,7 @@ function NavBarComponent() {
       <div className="container mx-auto flex justify-between items-center ">
         <img src={require("../../assets/images/logo.png")} alt="" />
         <div>
-          <ButtonComponent className="bg-grey0 mr-1 text-brand1 hover:border-brand0">
+          <ButtonComponent className="bg-grey0 mr-1 hover:border-brand1 text-brand0">
             Cadastro
           </ButtonComponent>
           <ButtonComponent className="ml-1">Login</ButtonComponent>
