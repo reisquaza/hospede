@@ -2,6 +2,7 @@ import React from "react";
 import NavBarComponent from "../../components/NavBar";
 import PropertyCard from "../../components/PropertyCard/PropertyCard";
 import { PropertyContext } from "../../context/PropertyContext";
+import FooterComponent from "../../components/Footer";
 
 function PropertySearch() {
     const { property } = React.useContext(PropertyContext);
@@ -27,6 +28,7 @@ function PropertySearch() {
                     </div>
                 </div>
             </div>
+            <FooterComponent />
         </div>
     );
 }
