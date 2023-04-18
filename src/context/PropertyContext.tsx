@@ -1,8 +1,9 @@
 import React from "react";
-import {
-    iPropertyContext,
-    iSearchFilter,
-} from "../interfaces/property.interface";
+import { iPorperty, iSearchFilter } from "../interfaces/property.interface";
+
+export interface iPropertyContext {
+    property: iPorperty;
+}
 
 export const PropertyContext = React.createContext<iPropertyContext>(
     {} as iPropertyContext
@@ -13,86 +14,43 @@ interface iPropertyProviderProps {
 }
 
 function PropertyProvider({ children }: iPropertyProviderProps) {
-    const propertyOptions: iSearchFilter[] = [
-        {
-            propretyName: "Hotel",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
+    const property: iPorperty = {
+        id: "e6136676-e5e3-4bdc-a737-c6d4e9540859",
+        propertyAddress: {
+            addressNumber: 11,
+            addressStreet: "aaa",
+            addressZipCode: "2222-65",
+            addressComplement: 24,
         },
-        {
-            propretyName: "Apartamento",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-        {
-            propretyName: "Pousadas",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-        {
-            propretyName: "Guesthouses",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-        {
-            propretyName: "Albergues",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-        {
-            propretyName: "Apart-hoteis",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-    ];
-
-    const citiesOptions: iSearchFilter[] = [
-        {
-            propretyName: "São Paulo",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-        {
-            propretyName: "Rio de Janeiro",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-        {
-            propretyName: "Florianópolis",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-        {
-            propretyName: "Salvador",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-        {
-            propretyName: "Gramado",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-        {
-            propretyName: "Fortaleza",
-            propertyImage:
-                "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
-            propertyAccommodations: 5,
-        },
-    ];
+        propertyDescription:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat ligula nec purus mattis, vel tincidunt elit sodales. Nam justo purus, venenatis quis pretium sed,  hendrerit non neque. Praesent sed fermentum sem.",
+        propertyGrade: 10,
+        propertyName: "AAAAA",
+        propertyReviews: [
+            {
+                reviewGrade: 10,
+                reviewUser: "87bbffef-e4ba-4dec-a0af-f0f80ad57ef0",
+            },
+        ],
+        propertyImage:
+            "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
+        propertyRooms: [
+            {
+                roomAvaiable: true,
+                roomBedroom: "2",
+                roomCapacity: "2",
+                roomLivingroom: "1",
+                roomName: "AAA",
+                roomNumber: 21,
+                roomPrice: 2555.75,
+            },
+        ],
+        propertyTags: [{ tagIcon: "aaa", tagName: "bbb" }],
+        userId: "87bbffef-e4ba-4dec-a0af-f0f80ad57ef0",
+    };
 
     return (
-        <PropertyContext.Provider value={{ propertyOptions, citiesOptions }}>
+        <PropertyContext.Provider value={{ property }}>
             {children}
         </PropertyContext.Provider>
     );

@@ -1,13 +1,13 @@
 import React from "react";
 import FooterComponent from "../../components/Footer";
 import NavBarComponent from "../../components/NavBar";
-import { PropertyContext } from "../../context/PropertyContext";
 import FilterSection from "../../components/FilterSection/FilterSection";
 import SearchProperty from "../../components/SearchProperty/SearchProperty";
+import { SearchFilterContext } from "../../context/SearchFilterContext";
 
 function Home() {
     const { propertyOptions, citiesOptions } =
-        React.useContext(PropertyContext);
+        React.useContext(SearchFilterContext);
 
     return (
         <div className="bg-grey0 h-screen w-full">
