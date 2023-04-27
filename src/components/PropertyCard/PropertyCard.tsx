@@ -1,6 +1,8 @@
 import React from "react";
 import ButtonComponent from "../Button";
 import { iPorperty } from "../../interfaces/property.interface";
+import { useNavigate } from "react-router-dom";
+import PropertyGrade from "../PropertyGrade/PropertyGrade";
 
 interface iPropertyCardProps {
     property: iPorperty;
@@ -17,7 +19,20 @@ function PropertyCard({ property }: iPropertyCardProps) {
         return propertyReviews + " Avaliações";
     };
 
-    const getPropertyGrade = (propertyGrade: string) => {};
+    const getAveragePropertyGrade = () => {
+        const reviews = property.propertyReviews;
+
+        if (reviews.length === 0) {
+            return 0;
+        }
+
+        const sum = reviews.reduce((total, review) => {
+            return total + review.reviewGrade;
+        }, 0);
+
+        const average = sum / reviews.length;
+        return average;
+    };
 
     const findLowestPrice = () => {
         const rooms = property.propertyRooms;
@@ -33,6 +48,8 @@ function PropertyCard({ property }: iPropertyCardProps) {
 
         return lowestPrice;
     };
+
+    const navigate = useNavigate();
 
     return (
         <div className="border-2 border-brand1 flex items-center justify-between p-5 rounded-md mb-5">
@@ -55,17 +72,7 @@ function PropertyCard({ property }: iPropertyCardProps) {
             </div>
 
             <div className="flex flex-col justify-between items-end">
-                <div className="flex items-center justify-between mb-10">
-                    <div className="flex flex-col items-end mr-2">
-                        <h3>Muito bom</h3>
-                        <p className="text-sm text-grey5">
-                            {getReviewsAmount()}
-                        </p>
-                    </div>
-                    <div className="flex items-center bg-brand1 px-3 py-2 rounded-md">
-                        <strong className="text-lg">10</strong>
-                    </div>
-                </div>
+                <PropertyGrade propertyReviews={property.propertyReviews} />
 
                 <strong>
                     {findLowestPrice().toLocaleString("pt-BR", {
@@ -74,7 +81,11 @@ function PropertyCard({ property }: iPropertyCardProps) {
                     })}
                 </strong>
 
-                <ButtonComponent>Ver detalhes</ButtonComponent>
+                <ButtonComponent
+                    onClick={() => navigate("/property", { replace: true })}
+                >
+                    Ver detalhes
+                </ButtonComponent>
             </div>
         </div>
     );

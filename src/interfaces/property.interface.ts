@@ -3,6 +3,8 @@ import { iAddress } from "./user.interfaces";
 export interface iPorperty extends iPropertyRequest {
     id: string;
     propertyGrade: number;
+    propertyReviews: iPropertyReview[];
+    propertyGallery: iPropertyGallery[];
 }
 
 export interface iPropertyRequest {
@@ -12,7 +14,6 @@ export interface iPropertyRequest {
     propertyTags: iPorpertyTags[];
     propertyAddress: iAddress;
     propertyRooms: iPropertyRoom[];
-    propertyReviews?: iPropertyReview[];
     userId: string;
 }
 
@@ -37,10 +38,12 @@ export interface iPropertyReview {
     reviewGrade: number;
 }
 
+export interface iPropertyGallery {
+    galleryImage: string;
+}
+
 export interface iSearchFilter {
     propretyName: string;
     propertyImage: string;
     propertyAccommodations: number;
 }
-
-

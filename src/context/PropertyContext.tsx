@@ -1,5 +1,5 @@
 import React from "react";
-import { iPorperty, iSearchFilter } from "../interfaces/property.interface";
+import { iPorperty } from "../interfaces/property.interface";
 
 export interface iPropertyContext {
     property: iPorperty;
@@ -46,6 +46,24 @@ function PropertyProvider({ children }: iPropertyProviderProps) {
             },
         ],
         propertyTags: [{ tagIcon: "aaa", tagName: "bbb" }],
+        propertyGallery: [
+            {
+                galleryImage:
+                    "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
+            },
+            {
+                galleryImage:
+                    "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
+            },
+            {
+                galleryImage:
+                    "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
+            },
+            {
+                galleryImage:
+                    "https://pix10.agoda.net/hotelImages/124/1246280/1246280_16061017110043391702.jpg?ca=6&ce=1&s=1024x768",
+            },
+        ],
         userId: "87bbffef-e4ba-4dec-a0af-f0f80ad57ef0",
     };
 
