@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import NavBarComponent from "../../components/NavBar";
+import FooterComponent from "../../components/Footer";
 
 function PropertyCreate() {
-  return (
-    <div>PropertyCreate</div>
-  )
+    return (
+        <div>
+            <NavBarComponent />
+            <FooterComponent />
+        </div>
+    );
 }
 
-export default PropertyCreate
+export default PropertyCreate;
