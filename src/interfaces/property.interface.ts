@@ -18,7 +18,20 @@ export interface iPropertyRequest {
 }
 
 export interface iPorpertyTags {
-    tagIcon: string;
+    tagIcon:
+        | "person-swimming"
+        | "spa"
+        | "car"
+        | "wifi"
+        | "utensils"
+        | "mug-saucer"
+        | "fan"
+        | "dumbbell"
+        | "water"
+        | "martini-glass"
+        | "leaf"
+        | "jug-detergent"
+        | "paw";
     tagName: string;
 }
 

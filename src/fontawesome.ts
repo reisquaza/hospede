@@ -1,5 +1,34 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import {
+    faArrowUp,
+    faPersonSwimming,
+    faSpa,
+    faCar,
+    faWifi,
+    faUtensils,
+    faMugSaucer,
+    faFan,
+    faDumbbell,
+    faWater,
+    faMartiniGlass,
+    faLeaf,
+    faJugDetergent,
+    faPaw,
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faArrowUp);
-    
+library.add(
+    faArrowUp,
+    faPersonSwimming,
+    faSpa,
+    faCar,
+    faWifi,
+    faUtensils,
+    faMugSaucer,
+    faFan,
+    faDumbbell,
+    faWater,
+    faMartiniGlass,
+    faLeaf,
+    faJugDetergent,
+    faPaw
+);

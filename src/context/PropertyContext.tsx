@@ -45,7 +45,12 @@ function PropertyProvider({ children }: iPropertyProviderProps) {
                 roomPrice: 2555.75,
             },
         ],
-        propertyTags: [{ tagIcon: "aaa", tagName: "bbb" }],
+        propertyTags: [
+            { tagIcon: "car", tagName: "Estacionamento" },
+            { tagIcon: "spa", tagName: "Spa" },
+            { tagIcon: "fan", tagName: "Ar-Condicionado" },
+            { tagIcon: "paw", tagName: "Pets" },
+        ],
         propertyGallery: [
             {
                 galleryImage:

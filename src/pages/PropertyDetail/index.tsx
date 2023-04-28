@@ -4,13 +4,12 @@ import FooterComponent from "../../components/Footer";
 import { PropertyContext } from "../../context/PropertyContext";
 import ButtonComponent from "../../components/Button";
 import PropertyGrade from "../../components/PropertyGrade/PropertyGrade";
+import PropertyTag from "../../components/PropertyTag/PropertyTag";
 
 function PropertyDetail() {
     const { property } = React.useContext(PropertyContext);
 
     const gallerySize = property.propertyGallery.length;
-
-
 
     return (
         <div>
@@ -67,8 +66,10 @@ function PropertyDetail() {
                     )}
                 </div>
 
-                <div className="border-2 border-brand1 rounded-md my-10 p-2 flex justify-items-center">
-                    aaa
+                <div className="border-2 border-brand1 rounded-md my-10 p-2 flex justify-items-center gap-5">
+                    {property.propertyTags.map(({ tagIcon, tagName }) => (
+                        <PropertyTag tagIcon={tagIcon} tagName={tagName} />
+                    ))}
                 </div>
 
                 <div className="border-2 border-brand1 rounded-md my-10 p-3">

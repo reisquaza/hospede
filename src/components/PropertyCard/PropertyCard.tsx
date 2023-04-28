@@ -3,37 +3,13 @@ import ButtonComponent from "../Button";
 import { iPorperty } from "../../interfaces/property.interface";
 import { useNavigate } from "react-router-dom";
 import PropertyGrade from "../PropertyGrade/PropertyGrade";
+import PropertyTag from "../PropertyTag/PropertyTag";
 
 interface iPropertyCardProps {
     property: iPorperty;
 }
 
 function PropertyCard({ property }: iPropertyCardProps) {
-    const getReviewsAmount = () => {
-        const propertyReviews = property.propertyReviews?.length;
-
-        if (propertyReviews === 1) {
-            return "1 Avaliação";
-        }
-
-        return propertyReviews + " Avaliações";
-    };
-
-    const getAveragePropertyGrade = () => {
-        const reviews = property.propertyReviews;
-
-        if (reviews.length === 0) {
-            return 0;
-        }
-
-        const sum = reviews.reduce((total, review) => {
-            return total + review.reviewGrade;
-        }, 0);
-
-        const average = sum / reviews.length;
-        return average;
-    };
-
     const findLowestPrice = () => {
         const rooms = property.propertyRooms;
 
@@ -67,7 +43,6 @@ function PropertyCard({ property }: iPropertyCardProps) {
                         {property.propertyAddress.addressStreet}
                     </p>
                 </div>
-                <div>tags</div>
                 <div>{property.propertyDescription}</div>
             </div>
 
