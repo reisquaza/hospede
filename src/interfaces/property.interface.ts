@@ -1,8 +1,7 @@
 import { iAddress } from "./user.interfaces";
 
-export interface iPorperty extends iPropertyRequest {
+export interface iProperty extends iPropertyRequest {
     id: string;
-    propertyGrade: number;
     propertyReviews: iPropertyReview[];
     propertyGallery: iPropertyGallery[];
 }
@@ -11,13 +10,13 @@ export interface iPropertyRequest {
     propertyName: string;
     propertyDescription: string;
     propertyImage: string;
-    propertyTags: iPorpertyTags[];
+    propertyTags: iPropertyTags[];
     propertyAddress: iAddress;
     propertyRooms: iPropertyRoom[];
     userId: string;
 }
 
-export interface iPorpertyTags {
+export interface iPropertyTags {
     tagIcon:
         | "person-swimming"
         | "spa"

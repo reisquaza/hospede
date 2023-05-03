@@ -1,12 +1,12 @@
 import React from "react";
 import ButtonComponent from "../Button";
-import { iPorperty } from "../../interfaces/property.interface";
+import { iProperty } from "../../interfaces/property.interface";
 import { useNavigate } from "react-router-dom";
 import PropertyGrade from "../PropertyGrade/PropertyGrade";
 import PropertyTag from "../PropertyTag/PropertyTag";
 
 interface iPropertyCardProps {
-    property: iPorperty;
+    property: iProperty;
 }
 
 function PropertyCard({ property }: iPropertyCardProps) {

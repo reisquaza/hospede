@@ -6,6 +6,9 @@ function UserRegister() {
     return (
         <div>
             <NavBarComponent />
+            <div className="container mx-auto my-20">
+                aaa
+            </div>
             <FooterComponent />
         </div>
     );

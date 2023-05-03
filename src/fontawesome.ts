@@ -14,6 +14,8 @@ import {
     faLeaf,
     faJugDetergent,
     faPaw,
+    faArrowRight,
+    faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -30,5 +32,7 @@ library.add(
     faMartiniGlass,
     faLeaf,
     faJugDetergent,
-    faPaw
+    faPaw,
+    faArrowRight,
+    faArrowLeft
 );
