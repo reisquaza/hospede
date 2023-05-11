@@ -1,4 +1,4 @@
-import { iAddress } from "./user.interfaces";
+import { iAddressRequest } from "./user.interfaces";
 
 export interface iProperty extends iPropertyRequest {
     id: string;
@@ -11,7 +11,7 @@ export interface iPropertyRequest {
     propertyDescription: string;
     propertyImage: string;
     propertyTags: iPropertyTags[];
-    propertyAddress: iAddress;
+    propertyAddress: iAddressRequest;
     propertyRooms: iPropertyRoom[];
     userId: string;
 }
